@@ -57,4 +57,10 @@ More examples can be found in tests.py.
 
     python tests.py
 
-Note: Potential instabilities in the iHackerNews API service may cause test failures.
+Note: Potential instabilities in the iHackerNews API service may cause test failures. It's not entirely uncommon to receive 500's or empty data from the API, which sucks, but c'est la vie.
+
+## TODO
+
+* Better documentation
+* Automatically parse Dates to datetime.datetime objects
+* Retry logic (?) -- See note under Testing
