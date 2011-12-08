@@ -6,7 +6,7 @@ A python library for the [iHackerNews API](http://api.ihackernews.com/).
 * **Version**: 1.0.0
 * **License**: MIT
 
-## Requirements
+## Dependencies
 
 * [Requests](http://python-requests.org/) is used to make the HTTP request.
 * A JSON library of some sort ([json](http://docs.python.org/library/json.html), [simplejson](http://pypi.python.org/pypi/simplejson/), or [django.utils.simplejson](https://www.djangoproject.com/))
@@ -56,3 +56,5 @@ More examples can be found in tests.py.
 ## Testing
 
     python tests.py
+
+Note: Potential instabilities in the iHackerNews API service may cause test failures.
