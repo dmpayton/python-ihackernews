@@ -1,0 +1,58 @@
+# iHackerNews
+
+A python library for the [iHackerNews API](http://api.ihackernews.com/).
+
+* **Author**: [Derek Payton](http://dmpayton.com)
+* **Version**: 1.0.0
+* **License**: MIT
+
+## Requirements
+
+* [Requests](http://python-requests.org/) is used to make the HTTP request.
+* A JSON library of some sort ([json](http://docs.python.org/library/json.html), [simplejson](http://pypi.python.org/pypi/simplejson/), or [django.utils.simplejson](https://www.djangoproject.com/))
+
+## Installation
+
+iHackerNews can be installed in any number of the usual ways:
+
+```
+easy_install ihackernews
+```
+
+```
+pip install ihackernews
+```
+
+```
+pip install -e git+git://github.com/dmpayton/python-ihackernews.git#egg=python-ihackernews
+```
+
+```
+git clone git://github.com/dmpayton/python-ihackernews.git
+cd python-ihackernews
+python setup.py install
+```
+
+## Usage
+
+[iHackerNews API Documentation](http://api.ihackernews.com/)
+
+Basic example:
+
+    ```
+    >>> from ihackernews import iHackerNewsAPI
+    >>> hn = iHackerNewsAPI()
+    >>> response = hn.profile('dmpayton')
+    >>> response
+    <iHackerNewsResponse: http://api.ihackernews.com/profile/dmpayton>
+    >>> response.response # The raw response from the requests library
+    <Response [200]>
+    >>> response.data # The parsed JSON data
+    {u'username': u'dmpayton', u'about': u"24 year old software developer (Python) in Southern California.<p>Me: <a href='http://dmpayton.com'>http://dmpayton.com</a>\nDay job: <a href='http://cukerinteractive.com'>http://cukerinteractive.com</a><p>derek.payton (at) Google's mail service.", u'createdAgo': u'1560 days ago', u'cachedOnUTC': u'/Date(1323325776265)/', u'version': u'1.0', u'karma': 578}
+    ```
+
+More examples can be found in tests.py.
+
+## Testing
+
+    python tests.py
